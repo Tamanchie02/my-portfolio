@@ -1,0 +1,112 @@
+header{
+  background-color: rgb(63 63 63);
+  margin: 0px;
+  padding: 0px;
+  font-size: small;
+}
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+  background-color: orange;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+footer ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 0px;
+    font-size: 20px;
+  }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    font-size: 20px;
+  }
+  li{
+    padding: 10px;
+  }
+  nav{
+    color: white;
+    font-weight: bolder;
+    font-family: arial;
+}
+h1{
+  color: white;
+}
+h2 {
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    padding: 5px;
+    color: Black;
+}
+
+h3{
+  font-size: 30px;
+  font-family:  Arial, sans-serif;
+    padding: 5px;
+    color: Black;
+ 
+}
+h4{
+  font-size: 30px;
+  font-family:  Arial, sans-serif;
+    padding: 5px;
+    color: Black;
+}
+  
+h5{
+  background-color:orange;
+  color:black;
+  font-size: 20px;
+}
+p {
+    font-size: 20px;
+    font-family:  Arial, sans-serif;
+    color: rgb(2, 2, 2);
+}
+img{
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+t{
+ border-style: solid;
+ border-color: white;
+ padding: 3px;
+ border-radius: 30px;
+}
+i{
+  color: blue;
+}
+ul li a:hover{
+  color:grey
+}
+
+dl dt{
+ font-size: 25px;
+ font-family: Arial, sans-serif;
+ color: rgb(2, 2, 2);
+}
+
+dl dd{
+  font-size: 20px;
+ font-family: 'Arial Narrow';
+ color: rgb(2, 2, 2);
+}
+
+ol li{
+  font-size: 20px;
+ font-family: Arial, sans-serif;
+ color: rgb(2, 2, 2);
+}
