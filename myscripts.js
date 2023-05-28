@@ -28,75 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fields.password= document.getElementById('password');
  fields.passwordCheck= document.getElementById('passwordCheck');
 })
-function getGender() {
- return document.querySelector('input[name="gender"]:checked')
-}
 
-function isNotEmpty(value) {
- if (value == null || typeof value == 'undefined' ) return false;
- return (value.length > 0);
-}
-const errorElement = document.getElementById('error');
-
-
-function isPasswordValid(password) {
- if (password.length > 8) {
- return true;
- }
- return false
-}
-function fieldValidation(field, validationFunction) {
- if (field == null) return false;
-
- let isFieldValid = validationFunction(field.value)
- if (!isFieldValid) {
- field.className = 'placeholderRed';
- } else {
- field.className = '';
- }
-
- return isFieldValid;
-}
-function isValid() {
- var valid = true;
- 
- valid &= fieldValidation(fields.Name, isNotEmpty);
- valid &= fieldValidation(fields.surname, isNotEmpty);
- valid &= fieldValidation(fields.idNumber, isNotEmpty);
- valid &= fieldValidation(fields.password, isPasswordValid);
- valid &= fieldValidation(fields.passwordCheck, isPasswordValid);
- valid &= arePasswordsEqual();
-
- return valid;
-}
-function arePasswordsEqual() {
- if (fields.password.value == fields.passwordCheck.value) {
- field.password.className = 'placeholderRed';
- field.passwordCheck.className = 'placeholderRed';
- return true;
- }
- return false
-}
-class User {
- constructor(name, surname,idNumber, gender) {
- this.name = name;
- this.surname = surname;
- this.idNumber = idNumber;
- this.gender = gender;    
- }
-}
-
-function submitContacts(){
-    fields.gender = getGender();
-    if(isValid()){
-        let usr = new User(name.value, surname.value, idNumber.value);
-        
-        alert(`${usr.name } You have successfully registered.`);
-    }
-    else{
-        alert("There was an error registering, please check your details and try again");
-    }
-}
 //Smooth scrolling function for my navigation links
 const links = document.querySelectorAll(".nav-ul a");
 for(const link of links){
@@ -111,3 +43,19 @@ function smoothScroll(e){
         behavior : "smooth"
     });
 }
+//Greeting feature
+document.addEventListener("DOMContentLoaded", function()
+{
+    var currentDate = new Date();
+    var currentHour =currentDate.getHours();
+    var greeting;
+    if(currentHour >= 0 && currentHour <=12){
+        greeting ="GOOD MORNING!!";
+    } else if(currentHour >= 12 && currentHour <= 18){
+        greeting= "GOOD AFTERNOON!!";
+    } else {
+        greeting ="GOOD EVENING!!";
+    }
+    var greetings = document.getElementById("para1");
+    greetings.textContent = greeting;
+});

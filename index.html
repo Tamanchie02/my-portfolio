@@ -20,7 +20,8 @@
     <h1>TAMANDA CHIDOTHE</h1><br>
   </header>
 <body>
-  <p id="para1">WELCOME TO MY PORTFOLIO!!!! PLEASE FILL IN THE DETAILS BELOW</p>
+  <p id="para1" class="greeting" on></p>
+  <p id="para2">WELCOME TO MY PORTFOLIO!!!! PLEASE FILL IN THE DETAILS BELOW</p>
      <form id="form" action="/" method="GET">
        <div>
          
@@ -34,8 +35,8 @@
       <label for="surname"><f>SURNAME</f></label><br>
       <input id="surname" name="SURNAME" type="text" required placeholder="Enter last name">
        </div>
+      
        
-       <div>
       <label for="ID"><f>ID_NUMBER</f></label><br>
       <input id="idNumber" name="ID_NUMBER" type="Number" required placeholder="Enter User  Id number">
        </div>
@@ -48,25 +49,20 @@
       <label for="passwordCheck"><f>CONFIRM_PASSWORD</f></label><br>
       <input id="passwordCheck" name="confirmPassword" type="text" required placeholder="Enter the password Again!"><br>  
       </div>
-       <div>
-         <label for="gender" id="gender"><f>GENDER</f></label><br>
-      <input type="radio" id="male" name="gender" value="male"> Male<br>
-      <input type="radio" id="female" name="gender" value="female"> Female
-       </div>
       <br>
-    <button type="submit">SUBMIT</button>
-     <div id="error"></div>
+    <button type="submit" onclick="formSubmission()">SUBMIT</button>
+     
   </form>
   <h2 id="Biography"><img src="images/tamanda.jpg" height="350px"> <br>
     BIOGRAPHY
   </h2>
-  <p id="para2">
+  <p id="para3">
     My name is Tamanda Chidothe, a 21 year old Malawian lady and a Mzuzu university Level 2 student currently studying ICT.
     I have completed courses like C programming, multimedia and end user computing to which i have all the basics of creating
     basic C programs, video creation and currently learning web designing. 
   </p>
   
-  <p id="para3">
+  <p id="para4">
     I am also a business lady selling electronic gadgets for example, Extensions,Chargers, phone batteries and USB drives.
     
   </p>
@@ -82,7 +78,7 @@
   </p>
   
    <h4 id="Skills">SKILLS</h4>
-  <p id="para4">
+  <p id="para5">
     <ol>
       <li>Business skills</li>
       <li>Communication skills</li>

@@ -4,7 +4,7 @@ header{
   padding: 0px;
 }
 body{
-    background-color: skyblue;
+    background-color: #8468ff;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -50,17 +50,17 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 5px;
     color: Black;
-}
-
 }
 h2 img{
   border-style: solid;
   border-radius: 50px;
+  border-color: #8468ff;
   }
 h3{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 5px;
-    color: Black; 
+    color: Black;
+ 
 }
 h4{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -75,7 +75,7 @@ p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(2, 2, 2);
 }
-#para1{
+#para2{
   text-align: Center;
   font-size: 30;
   font-weight: bolder;
@@ -103,7 +103,20 @@ t{
  padding: 3px;
  border-radius: 30px;
 }
-
-
+#para1{
+   color: white;
+   font-size: 1.5em;
+   width: 25em;
+   background: linear-gradient(-240deg, #8468ff 70%, #785bf7 70%);
+   top: 50%;
+   left: 50%;
+   padding: 4.5em 1.3em;
+   border-radius: 0.4em;
+   box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 1000;
+   word-spacing: 0.4em;
+   letter-spacing: 0.2em;
+}
 
 
