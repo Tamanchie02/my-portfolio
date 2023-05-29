@@ -142,4 +142,15 @@ border-radius: 10px;
   background-color: #e70909;
   border-radius: 10px;
 }
+#skill{
+  width: 350px;
+  height: 30px;
+  transition: background-color 0.3s;
+}
+#skill:hover{
+  background-color: blue;
 
+}
+.skills{
+  font-size: 25px;
+}

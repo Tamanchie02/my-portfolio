@@ -118,8 +118,16 @@ const interval = setInterval(() =>{
     i++;
     if(i = loadpercentage.length){
         clearInterval(interval);
-        loading.innerHTML = "Comple"
+        loading.innerHTML = "Complete"
     }
 }, 1000);
+//HOver effects
+var skill = document.querySelector('.skills');
+skill.addEventListener('mouseenter', function(){
+    skill.style.backgroundcolor ='red';
+});
+skill.addEventListener('mouseleave', function(){
+    skill.style.backgroundcolor = 'blue';
+})
 
 
