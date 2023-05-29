@@ -43,6 +43,10 @@ form{
   
   text-align: center;
 }
+#formTitle{
+  text-align: center;
+  font-size: 1.8em;
+}
 h1{
   color: white;
 }
@@ -106,9 +110,7 @@ t{
 #para1{
    color: white;
    font-size: 2.5em;
-   
    background: linear-gradient(-240deg, #8468ff 70%, #785bf7 70%);
-  
    padding: 1.3em;
    border-radius: 0.4em;
    box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
@@ -118,5 +120,19 @@ t{
    letter-spacing: 0.2em;
    text-align: center;
 }
+.highlight{
+  background-color: yellowgreen;
+}
 
+#progressBar{
+border-style: solid;
+border-color: red;
+
+}
+
+#progress{
+ height: 100%;
+ background-color: blue;
+ width: 0%;
+}
 

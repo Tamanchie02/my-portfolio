@@ -21,6 +21,7 @@ window.onload = changeImg;
 
 //Form validation
 var fields = {};
+var person = document.getElementById('Name');
 
 document.addEventListener("DOMContentLoaded", function() {
  fields.name = document.getElementById('Name');
@@ -29,6 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
     fields.password= document.getElementById('password');
  fields.passwordCheck= document.getElementById('passwordCheck');
 })
+   function formSubmission(){
+       if(fields.value !=="" && fields.value !== null && password.value === passwordCheck){
+           alert('You have successfully submitted your details');
+       }
+       else{
+           alert('you haven`t registered') ;
+       }
+
+   }
 
 //Smooth scrolling function for my navigation links
 const links = document.querySelectorAll(".nav-ul a");
@@ -63,17 +73,49 @@ document.addEventListener("DOMContentLoaded", function()
 //Design for my projects page
 //Filtering mechanism for projects
 function filterProjects(){
-    var filterValues = document.getElementById("filterInput").ariaValueMax.toUpperCase();
-    var items = document.getElementById("itemList").getElementsByTagName("dt");
-     for(var i =0; i < items.length; i++){
-         var items = items[i];
-         var text = item.innerText.toUpperCase();
-
-         if (text.indexOf(filterValues) >-1 ) {
-             item.style.display = "";
-         }else{
-             item.style.display = "none"
+    var itemList = document.getElementById("itemList");
+    var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
+    var selectedFilters = [];
+     checkboxes.forEach(function(checkbox){
+         if(checkbox.checked){
+             selectedFilters.push(checkbox.id);
          }
+     });
+     var items = itemList.getElementsByTagName("dt");
+     for(var i = 0; i< items.length; i++){
+        var item =items[i];
+        var filter = item.getAttribute("data-filter");
+        if(selectedFilters.length == 0 || selectedFilters.includes(filter)){
+            item.style.display = "block";
+        }else{
+            item.style.display ="none";
+        }
      }
+} 
+//Search feature
+const SearchInput =document.getElementById("SearchBar");
+const SearchButton =document.getElementById("SearchButton");
+
+SearchButton.addEventListener('click', doSearch);
+
+function doSearch(){
+  const query =SearchInput.toLowercase();
+  const elements =document.querySelectorAll('p, dl, dt, h5');
+  elements.forEach(Element => {
+      const text = Element.innerText.toLowercase();
+      if(text.includes(query)){
+          const regex = new RegExp(query, 'gi');
+          const highlitedText = text.replace(regex, match => `<span class ="highlight">${match}</span>`);
+          Element.innerHTML = highlitedText;
+      }
+  })
 }
+// progress bar
+var progressBar = document.getElementById("progress");
+function updateProgressBar(progress){
+    progress.style.width = progress + "%";
+    updateProgressBar(50)
+}
+
+
 
