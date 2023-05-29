@@ -1,3 +1,4 @@
+// The following are the javascript code for my homepage.
 //Slideshow for my projects
 var j = 0; 
 var images = [];
@@ -59,3 +60,20 @@ document.addEventListener("DOMContentLoaded", function()
     var greetings = document.getElementById("para1");
     greetings.textContent = greeting;
 });
+//Design for my projects page
+//Filtering mechanism for projects
+function filterProjects(){
+    var filterValues = document.getElementById("filterInput").ariaValueMax.toUpperCase();
+    var items = document.getElementById("itemList").getElementsByTagName("dt");
+     for(var i =0; i < items.length; i++){
+         var items = items[i];
+         var text = item.innerText.toUpperCase();
+
+         if (text.indexOf(filterValues) >-1 ) {
+             item.style.display = "";
+         }else{
+             item.style.display = "none"
+         }
+     }
+}
+
