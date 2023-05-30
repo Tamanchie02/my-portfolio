@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function()
     var currentHour =currentDate.getHours();
     var greeting;
     if(currentHour >= 0 && currentHour <=12){
-        greeting ="GOOD MORNING!!";
+        greeting ="GOOD MORNING!! AND WELCOME TO MY WEB PORTFOLIO ";
     } else if(currentHour >= 12 && currentHour <= 18){
-        greeting= "GOOD AFTERNOON!!";
+        greeting= "GOOD AFTERNOON!! AND WELCOME TO MY WEB PORTFOLIO";
     } else {
-        greeting ="GOOD EVENING!!";
+        greeting ="GOOD EVENING!! AND WELCOME TO MY WEB PORTFOLIO";
     }
     var greetings = document.getElementById("para1");
     greetings.textContent = greeting;
