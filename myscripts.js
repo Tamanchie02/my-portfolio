@@ -34,10 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
        if(fields.value !=="" && fields.value !== null && password.value === passwordCheck){
            alert('You have successfully submitted your details');
        }
-       else{
-           alert('you haven`t registered') ;
-       }
-
    }
 
 //Smooth scrolling function for my navigation links
@@ -111,11 +107,19 @@ function doSearch(){
   })
 }
 // progress bar
-var progressBar = document.getElementById("progress");
-function updateProgressBar(progress){
-    progress.style.width = progress + "%";
-    updateProgressBar(50)
-}
+const progress = document.querySelector('.progress');
+const loading = document.querySelector('.loading');
 
+let i=0;
+const loadpercentage =[0, 1, 6, 15, 30, 50, 75, 90, 95, 100];
+const interval = setInterval(() =>{
+    progress.style.width = loadpercentage[i] + "%";
+    loading.innerHTML = loadpercentage[i] + "%";
+    i++;
+    if(i = loadpercentage.length){
+        clearInterval(interval);
+        loading.innerHTML = "Comple"
+    }
+}, 1000);
 
 
