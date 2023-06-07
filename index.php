@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php include 'connectio.php'; ?>
 <html>
 <head> 
   <title>Tamanda Chidothe portfolio</title>
@@ -9,7 +9,7 @@
   <header>
     <nav>
       <ul class="nav-ul" id="nav-ul">
-        <li class="nav-link" > <a href="index.html"><t>Home</t></a> </li>
+        <li class="nav-link" > <a href="index.php"><t>Home</t></a> </li>
         <li class="nav-link" > <a href="#Biography"><t>About me</t></a> </li>
         <li class="nav-link" > <a href="#Contacts"><t>contact me</t></a> </li>
         <li class="nav-link" > <a href="#Skills"><t>Skills</t></a> </li>
@@ -47,7 +47,7 @@
       <dd>Through my C program course i learnt how to build a simple calculator<br>
         <a href=" https://www.javatpoint.com/calculator-program-in-c"><i>click here to view the program</i></a>
     </dl>
-    <a href="projects.html"><i>See more.....</i> </a>
+    <a href="projects.php"><i>Click here to view all projects.....</i> </a>
   </p>
   
    <h4 id="Skills">SKILLS</h4>
@@ -57,7 +57,7 @@
       <li>Communication skills</li>
       <li>Managing and maintaining PC</li>  
     </ol>
-    <a href="skills.html"><i>See more.....</i> </a>
+    <a href="skills.php"><i>Click here to view all skills.....</i> </a>
   </p>
       <h5 id="Contacts"> CONTACT DETAILS</h5>
    <h5> <img src="images/phone.png" width="20px">09925556947 or 0886531880</h5>

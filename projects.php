@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php include 'connection.php'; ?>
 <html>
 <head> 
   <title>projects</title>
@@ -9,10 +9,10 @@
   <header>
     <nav>
       <ul>
-        <li> <a href="index.html"><t>Home</t></a> </li>
-        <li> <a href="about.html"><t>About me</t></a> </li>
-        <li> <a href="contacts.html"><t>contact me</t></a> </li>
-        <li> <a href="skills.html"><t>Skills</t></a> </li>
+        <li> <a href="index.php"><t>Home</t></a> </li>
+        <li> <a href="about.php"><t>About me</t></a> </li>
+        <li> <a href="contacts.php"><t>contact me</t></a> </li>
+        <li> <a href="skills.php"><t>Skills</t></a> </li>
     </ul>
     </nav>
     <h1>TAMANDA CHIDOTHE</h1><br>
