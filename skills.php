@@ -20,19 +20,27 @@
   </header>
 <body>
   <h2>SKILLS</h2>
-  <dl>
-      <dt id="skill" class="skills">1.Business skills</dt>
-      <dd>As i already mentioned in my bio, I am a business lady</dd>
-      <dt id="skill" class="skills">2.Communication skills</dt>
-      <dd>I took a course called communication skills during my first year. I learnt all the skills for good communication. </dd>
-      <dt id="skill" class="skills">3.Managing and maintaining PC</dt>
-      <dd>With a course called PC managing and maintainance, i learnt how to maintain and manage PCs</dd>
-      <dt id="skill" class="skills">4.C programming</dt>
-      <dd>C programming is the first language i learnt in the university and i am more familiar with it. </dd>
-      <dt id="skill" class="skills">5.Using photoshop</dt>
-      <dd>In multimedia i learnt to edit photos and videos using adobe photoshop and adobe premier.</dd>
-    
-    </dl>
+    <?php
+$query="SELECT Id ,Name,Description FROM skills";
+$result= mysqli_query($connection,$query);
+
+if(!$result){
+  die("Error:".mysqli_error($connection));
+}
+  ?>
+<div>
+<?php while($row = mysqli_fetch_assoc($result)) {?>
+<div>
+<h2><?php echo $row['Id'] . " " . $row['Name'];?></h2>
+<p><?php echo $row['Description'];?></p>
+</div>
+<?php } ?>
+</div>
+
+<?php
+mysqli_free_result($result);
+mysqli_close($connection);
+?>
 </body>
   <h5 id="contacts"> CONTACT DETAILS</h5>
    <h5> <img src="images/phone.png" width="20px">09925556947 or 0886531880</h5>

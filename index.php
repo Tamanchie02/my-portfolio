@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include 'connectio.php'; ?>
+<?php include 'connection.php'; ?>
 <html>
 <head> 
   <title>Tamanda Chidothe portfolio</title>
@@ -53,9 +53,9 @@
    <h4 id="Skills">SKILLS</h4>
   <p id="para5">
     <ol>
-      <li>Business skills</li>
       <li>Communication skills</li>
-      <li>Managing and maintaining PC</li>  
+      <li>PC Managing and maintaining</li>
+      <li>C Programming</li>  
     </ol>
     <a href="skills.php"><i>Click here to view all skills.....</i> </a>
   </p>
@@ -70,27 +70,16 @@
    <label for="name"><f>NAME</f></label><br>
    <input id="name" name="NAME" type="text" required placeholder="Enter your name" size="85">
  
-    </div>
-    
-    <div>
  
-   <label for="surname"><f>SURNAME</f></label><br>
+   <label for="surname"><f>Surname</f></label><br>
    <input id="surname" name="SURNAME" type="text" required placeholder="Enter last name" size="85">
     </div>
-   
-    
-   <label for="ID"><f>ID_NUMBER</f></label><br>
-   <input id="idNumber" name="ID_NUMBER" type="text" required placeholder="Enter User  Id number" size="85">
-    </div>
-    
+
     <div>
-   <label for="password"><f>PASSWORD</f></label><br>
+   <label for="password"><f>Password</f></label><br>
    <input id="password" name="PASSWORD" type="text" required placeholder="Enter Your password" size="85"><br>  
    </div>
-    <div>
-   <label for="passwordCheck"><f>CONFIRM_PASSWORD</f></label><br>
-   <input id="passwordCheck" name="confirmPassword" type="text" required placeholder="Enter the password Again!" size="85"><br>  
-   </div>
+  
    <br>
  <button type="submit" onclick="formSubmission()">SUBMIT</button> 
 </form>

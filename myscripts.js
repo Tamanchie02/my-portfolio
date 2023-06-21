@@ -25,9 +25,8 @@ var person = document.getElementById('Name');
 
 document.addEventListener("DOMContentLoaded", function() {
  fields.name = document.getElementById('Name');
- fields.surname= document.getElementById('surName');
- fields.idNumber = document.getElementById('idNumber');
-    fields.password= document.getElementById('password');
+ fields.Email= document.getElementById('Email');
+ fields.password= document.getElementById('password');
  fields.passwordCheck= document.getElementById('passwordCheck');
 })
    function formSubmission(){

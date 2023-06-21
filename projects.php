@@ -22,31 +22,27 @@
   <input type="text" id="searchBar" placeholder="Search...." size="100">
   <button id="searchButton" onclick="doSearch">Search</button>
 
+    <?php
+$query="SELECT Id ,Name, Description FROM projects";
+$result= mysqli_query($connection,$query);
 
-  <p>
-    <input type="checkbox" id="filterA" onclick="filterProjects()">
-    <label for="filterA">Filter 1</label>
-    <input type="checkbox" id="filterB" onclick="filterProjects()">
-    <label for="filterB">Filter 2</label>
-    
-      <dl id="itemList">
-        <dt data-filter ="A">1.C program calculator (A)</dt>
-      <dd>Through my C program course i learnt how to build a simple calculator<br>
-        <img src="images/calculator.png" height="300px"><br>
-        <a href=" https://www.javatpoint.com/calculator-program-in-c"><i>click here to view the full program</i></a>
-      </dd>
-   
+if(!$result){
+  die("Error:".mysqli_error($connection));
+}
+  ?>
+<div>
+<?php while($row = mysqli_fetch_assoc($result)) {?>
+<div>
+<h1><?php echo  $row ['Id']." ".$row['Name'];?></h1>
+<p><?php echo $row['Description'];?></p>
+</div>
+<?php } ?>
+</div>
 
-   
-      <dt data-filter ="B">2.Web design (B)</dt>
-      <dd>I am currently taking the web design course to which i am learning to build simple webpages.
-        And i have a webpage uploaded on github.<br>
-        <img src="images/git.jpeg" width="300px"><br>
-        <p>As you can see it is viewable on the web.</p>
-        <a href="https://tamanchie02.github.io/my-portfolio/"><i>click here to view the page</i></a>
-      </dd>
-  
-    </dl>
+<?php
+mysqli_free_result($result);
+mysqli_close($connection);
+?>
   </p>
   <h5 id="contacts"> CONTACT DETAILS</h5>
    <h5> <img src="images/phone.png" width="20px">09925556947 or 0886531880</h5>
