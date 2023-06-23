@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
  fields.password= document.getElementById('password');
  fields.passwordCheck= document.getElementById('passwordCheck');
 })
-   function formSubmission(){
-       if(fields.value !=="" && fields.value !== null && password.value === passwordCheck){
-           alert('You have successfully submitted your details');
-       }
-   }
+//    function formSubmission(){
+//        if(fields.value !=="" && fields.value !== null && password.value === passwordCheck){
+//            alert('You have successfully submitted your details');
+//        }
+//    }
 
 //Smooth scrolling function for my navigation links
 const links = document.querySelectorAll(".nav-ul a");
@@ -67,66 +67,66 @@ document.addEventListener("DOMContentLoaded", function()
 });
 //Design for my projects page
 //Filtering mechanism for projects
-function filterProjects(){
-    var itemList = document.getElementById("itemList");
-    var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
-    var selectedFilters = [];
-     checkboxes.forEach(function(checkbox){
-         if(checkbox.checked){
-             selectedFilters.push(checkbox.id);
-         }
-     });
-     var items = itemList.getElementsByTagName("dt");
-     for(var i = 0; i< items.length; i++){
-        var item =items[i];
-        var filter = item.getAttribute("data-filter");
-        if(selectedFilters.length == 0 || selectedFilters.includes(filter)){
-            item.style.display = "block";
-        }else{
-            item.style.display ="none";
-        }
-     }
-} 
+// function filterProjects(){
+//     var itemList = document.getElementById("itemList");
+//     var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
+//     var selectedFilters = [];
+//      checkboxes.forEach(function(checkbox){
+//          if(checkbox.checked){
+//              selectedFilters.push(checkbox.id);
+//          }
+//      });
+//      var items = itemList.getElementsByTagName("dt");
+//      for(var i = 0; i< items.length; i++){
+//         var item =items[i];
+//         var filter = item.getAttribute("data-filter");
+//         if(selectedFilters.length == 0 || selectedFilters.includes(filter)){
+//             item.style.display = "block";
+//         }else{
+//             item.style.display ="none";
+//         }
+//      }
+// } 
 //Search feature
-const SearchInput =document.getElementById("SearchBar");
-const SearchButton =document.getElementById("SearchButton");
+// const SearchInput =document.getElementById("SearchBar");
+// const SearchButton =document.getElementById("SearchButton");
 
-SearchButton.addEventListener('click', doSearch);
+// SearchButton.addEventListener('click', doSearch);
 
-function doSearch(){
-  const query =SearchInput.toLowercase();
-  const elements =document.querySelectorAll('p, dl, dt, h5');
-  elements.forEach(Element => {
-      const text = Element.innerText.toLowercase();
-      if(text.includes(query)){
-          const regex = new RegExp(query, 'gi');
-          const highlitedText = text.replace(regex, match => `<span class ="highlight">${match}</span>`);
-          Element.innerHTML = highlitedText;
-      }
-  })
-}
+// function doSearch(){
+//   const query =SearchInput.toLowercase();
+//   const elements =document.querySelectorAll('p, dl, dt, h5');
+//   elements.forEach(Element => {
+//       const text = Element.innerText.toLowercase();
+//       if(text.includes(query)){
+//           const regex = new RegExp(query, 'gi');
+//           const highlitedText = text.replace(regex, match => `<span class ="highlight">${match}</span>`);
+//           Element.innerHTML = highlitedText;
+//       }
+//   })
+// }
 // progress bar
-const progress = document.querySelector('.progress');
-const loading = document.querySelector('.loading');
+// const progress = document.querySelector('.progress');
+// const loading = document.querySelector('.loading');
 
-let i=0;
-const loadpercentage =[0, 1, 6, 15, 30, 50, 75, 90, 95, 100];
-const interval = setInterval(() =>{
-    progress.style.width = loadpercentage[i] + "%";
-    loading.innerHTML = loadpercentage[i] + "%";
-    i++;
-    if(i = loadpercentage.length){
-        clearInterval(interval);
-        loading.innerHTML = "Complete"
-    }
-}, 1000);
+// let i=0;
+// const loadpercentage =[0, 1, 6, 15, 30, 50, 75, 90, 95, 100];
+// const interval = setInterval(() =>{
+//     progress.style.width = loadpercentage[i] + "%";
+//     loading.innerHTML = loadpercentage[i] + "%";
+//     i++;
+//     if(i = loadpercentage.length){
+//         clearInterval(interval);
+//         loading.innerHTML = "Complete"
+//     }
+// }, 1000);
 //HOver effects
-var skill = document.querySelector('.skills');
-skill.addEventListener('mouseenter', function(){
-    skill.style.backgroundcolor ='red';
-});
-skill.addEventListener('mouseleave', function(){
-    skill.style.backgroundcolor = 'blue';
-})
+// var skill = document.querySelector('.skills');
+// skill.addEventListener('mouseenter', function(){
+//     skill.style.backgroundcolor ='red';
+// });
+// skill.addEventListener('mouseleave', function(){
+//     skill.style.backgroundcolor = 'blue';
+// })
 
 

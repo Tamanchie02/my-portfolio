@@ -64,24 +64,18 @@
    <h5> <img src="images/mail.png" width="20">Email:tamanchiechidothe@gmail.com</h5>
    
    <h5 id="formTitle">CONTACT FORM</h5>
-   <form id="form" action="/" method="GET">
-    <div>
-      
-   <label for="name"><f>NAME</f></label><br>
-   <input id="name" name="NAME" type="text" required placeholder="Enter your name" size="85">
- 
- 
-   <label for="surname"><f>Surname</f></label><br>
-   <input id="surname" name="SURNAME" type="text" required placeholder="Enter last name" size="85">
-    </div>
+   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method= "POST">
 
-    <div>
+   <label for="name"><f>Username</f></label><br>
+   <input id="name" name="Username" type="text" required placeholder="Enter your Username" size="85"><br>
+
+   <label for="Email"><f>Email</f></label><br>
+   <input id="Email" name="Email" type="text" required placeholder="Enter EmailAddress" size="85"><br>
+     
    <label for="password"><f>Password</f></label><br>
-   <input id="password" name="PASSWORD" type="text" required placeholder="Enter Your password" size="85"><br>  
-   </div>
-  
+   <input id="password" name="Password" type="text" required placeholder="Enter Your password" size="85"><br>  
    <br>
- <button type="submit" onclick="formSubmission()">SUBMIT</button> 
+ <button type="submit"  name="Register">SUBMIT</button> 
 </form>
 </body>
 <footer>
